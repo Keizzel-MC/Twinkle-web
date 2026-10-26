@@ -1,0 +1,156 @@
+<!doctype html><html lang="es-DO"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#080c19"><meta name="referrer" content="strict-origin-when-cross-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'"><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/styles.css"><title>Twinkle — Administra tus servidores de Minecraft</title><meta name="description" content="Twinkle es un proyecto independiente para administrar servidores de Minecraft. Conoce el panel Web y Desktop."></head><body>
+<canvas id="twinkle-canvas" class="twinkle-canvas" aria-hidden="true"></canvas><a class="skip" href="#contenido">Saltar al contenido principal</a><header class="site-header"><div class="container header-row"><a class="brand" href="index.html" aria-label="Twinkle: ir al inicio"><img src="assets/twinkle-icon.webp" alt="" width="48" height="48">Twinkle</a><button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false">Menú</button><nav class="nav-links" id="site-nav" aria-label="Navegación principal"><a href="index.html" aria-current="page">Inicio</a><a href="index.html#funciones">Funciones</a><a href="index.html#proyecto">Proyecto</a><a href="contacto.html" >Contacto</a></nav><div class="header-actions">
+<button class="sound-toggle" type="button" data-sound-toggle aria-label="Efectos de sonido: activados" aria-pressed="true" title="Activar/Silenciar efectos de sonido">
+<span class="sound-icon" aria-hidden="true">🔊</span>
+<span class="sound-label">Sonido</span>
+</button>
+<a class="btn btn-secondary btn-small header-btn" href="https://github.com/Keizzel-MC/Twinkle-MC" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio en GitHub (abre otra pestaña)">Ver en GitHub ↗</a>
+</div></div></header><main id="contenido"><section class="hero"><div class="container hero-grid"><div><div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Gestiona tus servidores a tu manera</div><h1>Tu mundo.<br>Tu servidor.<br><span class="gradient-text">Tu control.</span></h1><p class="hero-copy">Twinkle es un proyecto para facilitar la administración de servidores de Minecraft desde una interfaz organizada. Explora sus herramientas y consulta el desarrollo en GitHub.</p><div class="hero-actions"><a class="btn btn-primary" href="https://github.com/Keizzel-MC/Twinkle-MC" target="_blank" rel="noopener noreferrer">Explorar el proyecto en GitHub ↗</a><a class="btn btn-secondary" href="#funciones">Conocer las funciones ↓</a></div><p class="microcopy">Proyecto independiente · Versiones Web y Desktop · Licencia de software MIT indicada en el repositorio</p></div><div class="hero-visual">
+<div class="glow" aria-hidden="true"></div>
+<div class="dashboard" role="region" aria-label="Demostración interactiva del panel Twinkle">
+<div class="dash-shell">
+<div class="dash-top">
+<span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span> Twinkle / Panel de Control</span>
+<span class="dash-status-pill"><span class="radar-dot"></span><span class="dash-tps-text">En línea · 20.0 TPS</span></span>
+</div>
+<div class="dash-layout">
+<div class="dash-sidebar" role="tablist" aria-label="Pestañas de la demostración">
+<button type="button" class="dash-side-item on" data-dash-tab="panel" role="tab" aria-selected="true">▦ Panel</button>
+<button type="button" class="dash-side-item" data-dash-tab="console" role="tab" aria-selected="false">⌘ Consola</button>
+<button type="button" class="dash-side-item" data-dash-tab="files" role="tab" aria-selected="false">▤ Archivos</button>
+<button type="button" class="dash-side-item" data-dash-tab="settings" role="tab" aria-selected="false">◇ Ajustes</button>
+</div>
+<div class="dash-main">
+<div class="dash-views">
+<!-- VIEW 1: PANEL -->
+<div class="dash-view active" data-dash-view="panel" role="tabpanel">
+<div class="dash-title" class="dash-title-flex">
+<span>Mi servidor Survival <small class="dash-version-tag">(Paper 1.21.4)</small></span>
+</div>
+<div class="dash-status">
+<span class="radar-dot"></span> Servidor activo · Puerto 25565
+</div>
+<div class="metric-row">
+<div class="metric">
+<small>Memoria RAM</small>
+<b data-metric-ram>3.42 / 8.0 GB</b>
+<div class="meter-bar"><div class="meter-fill ram-meter-default" data-metric-ram-bar></div></div>
+</div>
+<div class="metric">
+<small>Rendimiento / CPU</small>
+<b><span data-metric-cpu>14.2%</span> · <span class="tps-good">20.0 TPS</span></b>
+<div class="meter-bar"><div class="meter-fill" class="meter-fill cpu-meter-fill"></div></div>
+</div>
+</div>
+<div class="player-section-row">
+<small class="player-label">Jugadores en línea (8/30):</small>
+<div class="player-list">
+<span class="player-chip"><span class="player-head"></span> <span class="player-op">Keizzel [OP]</span></span>
+<span class="player-chip"><span class="player-head player-head-blue"></span> Alex_99</span>
+<span class="player-chip"><span class="player-head player-head-violet"></span> Steve_Pro</span>
+<span class="player-chip"><span class="player-head player-head-gold"></span> Miner_X</span>
+<span class="player-chip player-chip-more">+4 más</span>
+</div>
+</div>
+<div class="dash-actions-row">
+<button type="button" class="dash-act-btn" data-dash-action="restart">⚡ Reiniciar</button>
+<button type="button" class="dash-act-btn" data-dash-action="save">💾 Guardar</button>
+<button type="button" class="dash-act-btn" data-dash-action="backup">📦 Backup</button>
+</div>
+</div>
+
+<!-- VIEW 2: CONSOLE -->
+<div class="dash-view" data-dash-view="console" role="tabpanel">
+<div class="term" data-dash-console aria-live="polite">
+<div class="term-line term-info">[12:00:01 INFO]: Loading Paper 1.21.4 libraries, please wait...</div>
+<div class="term-line term-info">[12:00:03 INFO]: Starting minecraft server on *:25565</div>
+<div class="term-line term-success">[12:00:06 INFO]: [Twinkle] Sincronización de panel establecida (v2.0.2).</div>
+<div class="term-line term-success">[12:00:08 INFO]: Done (4.12s)! For help, type "help"</div>
+<div class="term-line term-info">[12:00:15 INFO]: Keizzel[/127.0.0.1:58432] logged in with entity id 104</div>
+<div class="term-line term-chat">[12:00:18 INFO]: &lt;Keizzel&gt; ¡Servidor optimizado y listo para la comunidad!</div>
+</div>
+<div class="dash-cmd-bar">
+<input class="dash-cmd-input" type="text" data-dash-input placeholder="Comando (/tps, /list, /say...)" aria-label="Comando de consola">
+<button class="dash-cmd-send" type="button" data-dash-send>Enviar ↵</button>
+</div>
+<div class="cmd-chips">
+<span class="cmd-chip-label">Probar:</span>
+<button type="button" class="cmd-chip" data-cmd-chip="tps">/tps</button>
+<button type="button" class="cmd-chip" data-cmd-chip="list">/list</button>
+<button type="button" class="cmd-chip" data-cmd-chip="say ¡Hola a todos!">/say Hola</button>
+<button type="button" class="cmd-chip" data-cmd-chip="time set day">/time set day</button>
+<button type="button" class="cmd-chip" data-cmd-chip="clear">/clear</button>
+</div>
+</div>
+
+<!-- VIEW 3: FILES -->
+<div class="dash-view" data-dash-view="files" role="tabpanel">
+<div class="dash-title dash-section-title">Explorador de Archivos</div>
+<div class="dash-file-list">
+<div class="file-item" data-dash-file="server.properties">
+<span>📄 server.properties</span>
+<small class="file-size-tag">1.2 KB</small>
+</div>
+<div class="file-item" data-dash-file="paper.yml">
+<span>📄 paper.yml</span>
+<small class="file-size-tag">4.8 KB</small>
+</div>
+<div class="file-item" data-dash-file="ops.json">
+<span>📄 ops.json</span>
+<small class="file-size-tag">156 B</small>
+</div>
+<div class="file-item" data-dash-file="plugins">
+<span>📁 plugins/ <span class="tps-good">(4 cargados)</span></span>
+<small class="file-size-tag">Directorio</small>
+</div>
+</div>
+<div class="file-preview-overlay" data-dash-file-preview>
+<div class="file-preview-header">
+<span data-dash-preview-title>Archivo</span>
+<button type="button" class="file-preview-close" data-dash-file-close aria-label="Cerrar vista previa">✕</button>
+</div>
+<pre class="file-preview-code" data-dash-preview-code></pre>
+</div>
+</div>
+
+<!-- VIEW 4: SETTINGS -->
+<div class="dash-view" data-dash-view="settings" role="tabpanel">
+<div class="dash-title dash-section-title">Configuración Rápida</div>
+<div class="dash-settings-grid">
+<div class="dash-setting-row">
+<span>Modo Online (Mojang)</span>
+<button type="button" class="dash-toggle active" data-dash-toggle aria-checked="true" aria-label="Modo Online"><span class="dash-toggle-thumb"></span></button>
+</div>
+<div class="dash-setting-row">
+<span>PVP Jugador vs Jugador</span>
+<button type="button" class="dash-toggle active" data-dash-toggle aria-checked="true" aria-label="PVP"><span class="dash-toggle-thumb"></span></button>
+</div>
+<div class="dash-setting-row">
+<span>Autoguardado cada 5 min</span>
+<button type="button" class="dash-toggle active" data-dash-toggle aria-checked="true" aria-label="Autoguardado"><span class="dash-toggle-thumb"></span></button>
+</div>
+<div class="dash-setting-row">
+<span>Versión de Java</span>
+<span class="java-ver-tag">Java 21 LTS ✓</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="visual-caption">Demostración interactiva · Haz clic en las pestañas y botones para interactuar</p>
+</div></div></div></section><section class="section section-border" id="funciones"><div class="container"><div class="section-header reveal"><div class="eyebrow">Herramientas del proyecto</div><h2>Menos vueltas.<br><span class="gradient-text">Más organización.</span></h2><p>El proyecto reúne utilidades de administración. Las funciones concretas pueden variar según la versión Web o Desktop, el sistema y el tipo de servidor.</p></div><div class="cards"><article class="card reveal reveal-delay-1"><span class="icon-box" aria-hidden="true">⌘</span><h3>Consola del servidor</h3><p>Accede a la salida de la consola y a los controles disponibles en tu instalación.</p></article><article class="card reveal reveal-delay-2"><span class="icon-box" aria-hidden="true">▤</span><h3>Gestión de archivos</h3><p>Explora y administra archivos de configuración y carpetas del servidor desde el panel.</p></article><article class="card reveal reveal-delay-3"><span class="icon-box" aria-hidden="true">✦</span><h3>Mods e instaladores</h3><p>Consulta las herramientas de instalación compatibles con tu versión y cargador.</p></article><article class="card reveal reveal-delay-4"><span class="icon-box" aria-hidden="true">◫</span><h3>Servidores organizados</h3><p>Administra las configuraciones y servidores disponibles en tu entorno.</p></article><article class="card reveal reveal-delay-5"><span class="icon-box" aria-hidden="true">◇</span><h3>Java y memoria</h3><p>El proyecto contempla opciones de configuración del entorno de ejecución, según edición.</p></article><article class="card reveal reveal-delay-6"><span class="icon-box" aria-hidden="true">↗</span><h3>Código abierto</h3><p>Explora el repositorio, su documentación y las condiciones de la licencia del código.</p></article></div></div></section><section class="section section-border" id="proyecto"><div class="container two-col"><div><div class="eyebrow">Conoce Twinkle</div><div class="section-header reveal"><h2>Una herramienta para quienes construyen sus propios mundos.</h2><p>Twinkle surge como una iniciativa independiente para simplificar tareas habituales de administración de servidores de Minecraft. No es un servicio oficial de Mojang ni una plataforma de alojamiento de servidores.</p></div><a class="btn btn-secondary" href="https://github.com/Keizzel-MC/Twinkle-MC" target="_blank" rel="noopener noreferrer">Consultar documentación en GitHub ↗</a>
+<div class="repo-clone-box reveal">
+<div class="repo-clone-header">
+<span class="repo-tag">Repositorio Oficial en GitHub</span>
+<span class="repo-branch">main</span>
+</div>
+<div class="repo-clone-code">
+<code>git clone https://github.com/Keizzel-MC/Twinkle-MC.git</code>
+<button type="button" class="btn-copy" data-copy="git clone https://github.com/Keizzel-MC/Twinkle-MC.git" aria-label="Copiar comando al portapapeles">
+<span class="copy-text">Copiar</span>
+</button>
+</div>
+</div></div><div class="info-panel reveal"><span class="pill">Principios de esta web</span><h3 class="info-title">Información clara, sin seguimiento innecesario.</h3><ul class="points"><li>Este sitio no incluye servicios de analíticas ni píxeles publicitarios.</li><li>Las páginas y los recursos visuales se sirven desde el propio sitio.</li><li>Las políticas legales y los medios de contacto están enlazados de forma visible.</li><li>No publicamos cifras de usuarios, valoraciones ni testimonios sin verificarlos.</li></ul></div></div></section><section class="section"><div class="container"><div class="cta reveal"><div><div class="eyebrow">Explora el proyecto</div><h2>El siguiente paso empieza en GitHub.</h2><p>Consulta las publicaciones, los archivos disponibles y las instrucciones del repositorio antes de instalar.</p></div><a class="btn btn-primary" href="https://github.com/Keizzel-MC/Twinkle-MC" target="_blank" rel="noopener noreferrer">Visitar GitHub ↗</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html" aria-label="Twinkle: inicio"><img src="assets/twinkle-icon.webp" alt="" width="48" height="48">Twinkle</a><p class="footer-desc">Proyecto independiente de herramientas para gestionar servidores de Minecraft. Publicado con una orientación al código abierto.</p><span class="pill">Proyecto independiente · República Dominicana</span></div><div><h3>Explorar</h3><a href="index.html">Inicio</a><a href="index.html#funciones">Funciones</a><a href="index.html#proyecto">Acerca del proyecto</a><a href="contacto.html">Contacto</a><a href="https://github.com/Keizzel-MC/Twinkle-MC" target="_blank" rel="noopener noreferrer">GitHub (abre otra pestaña)</a></div><div><h3>Información y privacidad</h3><a href="privacidad.html">Política de privacidad</a><a href="terminos.html">Términos y condiciones</a><a href="cookies.html">Política de cookies</a><a href="contacto.html#identificacion">Identificación del responsable</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Twinkle. Contenido del sitio: derechos reservados salvo indicación contraria.</span><span>No afiliado con Mojang Studios ni Microsoft. Minecraft es una marca de sus respectivos titulares.</span></div></div></footer><script src="assets/site.js" defer></script><button type="button" class="back-to-top" data-back-to-top aria-label="Volver arriba">↑</button>
+</body></html>
